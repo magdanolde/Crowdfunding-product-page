@@ -1,0 +1,19 @@
+$base-font-size:14px;
+
+$base-font-family: 'Commissioner', sans-serif;
+
+$font-weight-light: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+
+$color-alpha: hsl(176, 50%, 47%);
+$color-beta: hsl(176, 72%, 28%);
+$color-gamma: hsl(0, 0%, 48%);
+$color-omega: hsl(0, 0%, 0%);
+
+
+$breakpoints: (
+    tablet: 'min-width: 550px',
+    desktop: "min-width: 1100px"
+);
