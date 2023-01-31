@@ -1,0 +1,304 @@
+body{
+    font-family: $base-font-family;
+}
+.header {
+    background-image: url(../images/image-hero-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 70% 90%;
+    height: 30vh;
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 90%;
+        margin: 0 auto;
+
+    }
+
+    &__label {
+        cursor: pointer;
+        position: absolute;
+        top: 1.5%;
+        right: 4%;
+        display: block;
+        color: transparent;
+        z-index: 100;
+    }
+    &__logo {
+        width: 140px;
+        height: 23px;
+        margin-top: 24px;
+        display: block;
+    }
+
+    &__icon-mobile  {
+        height: 23px;
+        position: absolute;
+        top: 1.5%;
+        right: 4%;
+        margin: 13px 5px 0 0;
+    }
+
+    &__closure {
+        position: absolute;
+        top: 3%;
+        right: 6%;
+        font-weight: $font-weight-bold;
+        color: $color-sigma;
+        height: 40px;
+
+    }
+    
+    #toggle {
+            display: none;
+        }
+        
+    #toggle:checked~.nav {
+            display: block;
+        }
+    
+    #toggle:checked~.header__closure {
+            display: block;
+        }
+    
+    #toggle:checked~label>img {
+            display: none;
+        }
+        
+    #toggle:not(:checked)~.nav {
+            display: none;
+        }
+    
+    #toggle:not(:checked)~.header__closure {
+            display: none;
+        }
+    
+    #toggle:not(:checked)~label>img {
+            display: block;
+        }
+
+}
+
+.nav {
+    width: 90%;
+    display: none;
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    height: 150px;
+    background-color: $color-sigma;
+    list-style: none;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    &__item {
+        padding: 4% 0 4% 6%;
+        height: 33.3%;
+        border-bottom: 1px solid lightgray;
+    }
+
+    &__item:last-child {
+        padding: 4% 0 4% 6%;
+        height: 33.3%;
+        border-bottom: none;
+    }
+
+    &__link {
+        font-size: 1.2rem;
+        color: $color-omega;
+        font-weight: $font-weight-medium;
+        
+    }
+
+    &__link:hover {
+        font-size: 1.2rem;
+      
+    }
+
+}
+
+.main {
+    text-align: center;
+    background-color: $color-lambda;
+    .main__description {
+        text-align: center;
+        max-width: 90%;
+        margin: 0 auto;
+        border: 1px solid $color-mu;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: $color-sigma;
+        position: relative;
+        bottom: 45px;
+
+        .description__logo {
+            position: relative;
+            bottom: 60px;
+        }
+
+        .description__title {
+            font-size: 1.5em;
+            position: relative;
+            top: -30px;
+
+        }
+    
+        .description__text {
+            color: $color-gamma;
+            font-size: 0.9em;
+            margin-top: -5px;
+        }
+
+        .description__wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+        }
+
+        .description__button {
+            background-color: $color-alpha;
+            width: 220px;
+            height: 60px;
+            border-radius: 10rem;
+            color: $color-mu;
+            cursor: pointer;
+            padding: 5px;
+            font-weight: $font-weight-bold;
+            line-height: 1.4px;
+            font-size: 1.1em;
+            &:hover{
+                background-color: $color-beta;
+            }
+        }
+
+        .description__bookmark {
+            height: 60px;
+            width: 60px;
+        }
+
+    }
+    .main__budget {
+        text-align: center;
+        max-width: 90%;
+        margin: -20px auto 20px auto;
+        border: 1px solid $color-mu;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: $color-sigma;
+
+        .budget__total,
+        .budget__donors,
+        .budget__days {
+            margin-top: 30px;
+        }
+
+        .budget__number {
+            font-weight: $font-weight-bold;
+            font-size: 1.6em;
+            margin-bottom: 8px;
+        }
+
+        .budget__text {
+            color: $color-gamma;
+        }
+
+
+        .budget__progess-bar {
+            width: 300px;
+            height: 20px;
+            background-color: $color-mu;
+            display: flex;
+            align-items: center;
+            margin: 20px 0 20px 0;
+            border-radius: 10px;
+
+            .budget__bar-inside {
+                background-color: $color-alpha;
+                width: 80%;
+                height: 80%;
+                border-radius: 10px;
+                margin-left: 3px;
+            }
+
+        }
+    }
+
+}
+
+.main__details {
+    text-align: left;
+    max-width: 90%;
+    margin: 0 auto;
+    border: 1px solid $color-mu;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $color-sigma;
+
+    .details__title {
+        margin: 15px 0 15px 0;
+    }
+
+    .details__text {
+        line-height: 1.4rem;
+        margin-bottom: 25px;
+    }
+
+    .details__scheme {
+        margin: 20px auto;
+        border: 1px solid $color-psi;
+        padding: 25px;
+        border-radius: 10px;
+
+
+        .scheme__button {
+            background-color: $color-alpha;
+            width: 150px;
+            height: 50px;
+            border-radius: 10rem;
+            color: $color-mu;
+            cursor: pointer;
+            padding: 7px;
+            font-weight: $font-weight-bold;
+            line-height: 1.4px;
+            margin-top: 10px;
+            &:hover {
+                background-color: $color-beta;
+            }
+
+        }
+
+        .scheme__subtitle {
+            color:  $color-alpha;
+            margin: 5px 0 20px 0;
+            line-height: 1.5rem;
+        }
+
+        .scheme__description {
+            line-height: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .scheme__number {
+            margin: 10px 0 10px 0;
+            display: flex;
+    
+            .scheme__number-detail {
+                font-weight: $font-weight-bold;
+                display: block;
+                margin-right: 10px;
+            }
+        }
+
+    }
+
+
+
+}
+
+
+
