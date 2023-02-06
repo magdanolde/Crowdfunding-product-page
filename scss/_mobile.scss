@@ -94,6 +94,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: left;
+    z-index: 101;
 
     &__item {
         padding: 4% 0 4% 6%;
@@ -124,6 +125,7 @@ body{
 .main {
     text-align: center;
     background-color: $color-lambda;
+    padding: 30px 0;
     .main__description {
         text-align: center;
         max-width: 90%;
@@ -266,9 +268,9 @@ body{
             font-weight: $font-weight-bold;
             line-height: 1.4px;
             margin-top: 10px;
-            &:hover {
-                background-color: $color-beta;
-            }
+                &:hover {
+                    background-color: $color-beta;
+                }
 
         }
 
@@ -289,15 +291,212 @@ body{
     
             .scheme__number-detail {
                 font-weight: $font-weight-bold;
-                display: block;
+                display: block;    
                 margin-right: 10px;
+                font-size: 1.6em;
+            }
+
+            .scheme__text {
+                margin-top: 6px;
+            
             }
         }
+        
+    }
+
+    .details__scheme:last-child > button {
+        background-color: $color-gamma;
+        &:hover {
+            background-color: $color-gamma;
+        }
+    }
+
+    .details__scheme-wrapper {
+        background-color: $color-sigma;
+        opacity: 0.6;
+        z-index: 88;
+    }
+
+}
+
+.modal {
+    text-align: left;
+    max-width: 95%;
+    margin: 0 auto;
+    border: 1px solid $color-mu;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $color-sigma;
+    
+    &__main {
+        padding: 20px;
+    }
+
+    &__button {
+        background: transparent;
+    }
+
+    &__scheme {
+        margin: 20px auto;
+        border: 1px solid $color-psi;
+        padding: 25px;
+        border-radius: 10px;
+        &:first-child > input:checked {
+            border: 1px solid $color-alpha;
+        }
+    }
+
+    &__text {
+        margin-top: 15px;
+        color: $color-gamma;
+        font-size: 0.9em;
+        line-height: 1.3rem;
+
+    }
+
+    &__description {
+        color: $color-gamma;
+        line-height: 1.3rem;
+        margin-bottom: 15px;
+        font-size: 0.9em;
+        
+    }
+
+    &__main {
+        color:$color-omega;
+    }
+
+    &__button {
+        position: absolute;
+        left: 85%;
+        top: 6%;
+    }
+
+    &__subtitle {
+        color:  $color-alpha;
+        margin: 5px 0 20px 0;
+        line-height: 1.5rem;
+    }
+
+    &__number {
+        margin: 10px 0 10px 0;
+        display: flex;
+        .modal__number-detail {
+            font-weight: $font-weight-bold;
+            display: block;    
+            margin-right: 10px;
+            font-size: 1.6em;
+        }
+        .modal__text-detail {
+            margin-top: 6px;
+        
+        }
+    }
+
+    &__scheme-wrapper {
+        background-color: $color-sigma;
+        opacity: 0.6;
+        z-index: 88;
 
     }
 
 
+    // &__wrapper-title {
+        // position: relative;
+        // left: 25px;
 
+    // }
+
+    &__radio {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 10px;
+
+        .radio__input {
+            display: none;
+            &:checked + .radio__radio::after {
+                transform: scale(0.6);
+            };
+            
+        }
+
+        .radio__radio {
+            width: 1.5em;
+            height: 1.5em;
+            border: 1px solid $color-gamma;
+            border-radius: 50%;
+            margin: 0 12px 12px 0;
+            padding: 1px;
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                display: block;
+                border-radius: 50%;
+                background: $color-alpha;
+                transform: scale(0);
+                transition: transform 0.15s;
+
+
+            }
+        }
+
+
+    }
+   
+}
+
+.all__wrapper {
+    background-color: $color-omega;
+    opacity: 0.6;
+    z-index: 9;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    visibility: visible;
+    display: none;
+}
+
+.final {
+    background-color: $color-sigma;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+    border: 1px solid $color-mu;
+    padding: 31px;
+    border-radius: 10px;
+
+        &__image {
+            width: 60px;
+            height: 60px;
+        }
+
+        &__title {
+            margin: 20px 0 20px 0;
+        }
+
+        &__text {
+            margin-bottom: 32px;
+
+        }
+
+        &__button {
+            background-color: $color-alpha;
+            width: 120px;
+            height: 50px;
+            border-radius: 10rem;
+            color: $color-mu;
+            cursor: pointer;
+            padding: 4px;
+            line-height: 1.4px;
+            font-size: 0.9em;
+            font-weight: $font-weight-bold;
+        }
+
+    
 }
 
 
