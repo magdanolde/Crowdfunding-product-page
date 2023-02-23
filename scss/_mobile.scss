@@ -6,7 +6,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 70% 90%;
-    height: 30vh;
+    height: 38vh;
 
     &__menu {
         display: flex;
@@ -17,14 +17,13 @@ body{
 
     }
 
-    &__label {
+    &__button {
         cursor: pointer;
-        position: absolute;
-        top: 1.5%;
-        right: 4%;
+        width: 100%;
+        height: auto;
+        margin-top: 24px;
         display: block;
-        color: transparent;
-        z-index: 100;
+        background: transparent;
     }
     &__logo {
         width: 140px;
@@ -39,6 +38,20 @@ body{
         top: 1.5%;
         right: 4%;
         margin: 13px 5px 0 0;
+        &--close {
+            display: none;
+            &.active {
+                display: block;
+                z-index: 102;
+                position: relative;
+            }
+        }
+        &--open {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
     }
 
     &__closure {
@@ -50,51 +63,26 @@ body{
         height: 40px;
 
     }
-    
-    #toggle {
-            display: none;
-        }
-        
-    #toggle:checked~.nav {
-            display: block;
-        }
-    
-    #toggle:checked~.header__closure {
-            display: block;
-        }
-    
-    #toggle:checked~label>img {
-            display: none;
-        }
-        
-    #toggle:not(:checked)~.nav {
-            display: none;
-        }
-    
-    #toggle:not(:checked)~.header__closure {
-            display: none;
-        }
-    
-    #toggle:not(:checked)~label>img {
-            display: block;
-        }
 
 }
 
 .nav {
-    width: 90%;
+    
     display: none;
-    position: absolute;
-    top: 12%;
-    left: 5%;
-    height: 150px;
-    background-color: $color-sigma;
-    list-style: none;
-    border-radius: 7px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    z-index: 101;
+        &.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            height: 200px;
+            width: 350px;
+            background-color: $color-sigma;
+            list-style: none;
+            border-radius: 7px;
+            align-items: left;
+            z-index: 101;
+        }
 
     &__item {
         padding: 4% 0 4% 6%;
@@ -135,24 +123,26 @@ body{
         border-radius: 10px;
         background-color: $color-sigma;
         position: relative;
-        bottom: 45px;
+        bottom: 83px;
 
         .description__logo {
             position: relative;
             bottom: 60px;
+            height: 60px;
+            width: 60px;
         }
 
         .description__title {
             font-size: 1.5em;
             position: relative;
-            top: -30px;
+            top: -45px;
 
         }
     
         .description__text {
             color: $color-gamma;
             font-size: 0.9em;
-            margin-top: -5px;
+            margin-top: -25px;
         }
 
         .description__wrapper {
@@ -187,7 +177,7 @@ body{
     .main__budget {
         text-align: center;
         max-width: 90%;
-        margin: -20px auto 20px auto;
+        margin: -55px auto 20px auto;
         border: 1px solid $color-mu;
         padding: 20px;
         border-radius: 10px;
@@ -327,6 +317,8 @@ body{
     padding: 20px;
     border-radius: 10px;
     background-color: $color-sigma;
+
+
     
     &__main {
         padding: 20px;
@@ -339,10 +331,10 @@ body{
     &__scheme {
         margin: 20px auto;
         border: 1px solid $color-psi;
-        padding: 25px;
+        padding: 25px 25px 15px 25px;
         border-radius: 10px;
-        &:first-child > input:checked {
-            border: 1px solid $color-alpha;
+        &.active {
+            border: 2px solid $color-alpha;
         }
     }
 
@@ -366,11 +358,11 @@ body{
         color:$color-omega;
     }
 
-    &__button {
-        position: absolute;
-        left: 85%;
-        top: 6%;
-    }
+    // &__button {
+        // position: absolute;
+        // left: 85%;
+        // top: 6%;
+    // }
 
     &__subtitle {
         color:  $color-alpha;
@@ -379,7 +371,7 @@ body{
     }
 
     &__number {
-        margin: 10px 0 10px 0;
+        margin: 10px 0 20px 0;
         display: flex;
         .modal__number-detail {
             font-weight: $font-weight-bold;
@@ -398,6 +390,76 @@ body{
         opacity: 0.6;
         z-index: 88;
 
+    }
+
+    &__pledge {
+        padding: 5px 20px;
+        text-align: center;
+        display: none;
+        &::before {
+            content: "";
+        display: block;
+        width: 138%;
+        height: 1px;
+        background: $color-psi;
+        position: relative;
+        left: -46px;
+        }
+        &.active {
+            display: block;
+        } 
+        
+
+
+        .pledge__wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pledge__text {
+            color: $color-gamma;
+            line-height: 1.1rem;
+            margin: 30px 0 15px 0;
+            font-size: 0.9em;
+        }
+
+        .pledge__button {
+            background-color: $color-alpha;
+            width: 120px;
+            height: 50px;
+            border-radius: 10rem;
+            color: $color-mu;
+            cursor: pointer;
+            padding: 5px;
+            font-weight: $font-weight-bold;
+            line-height: 1.4px;
+            font-size: 0.9em;
+
+        }
+
+        .pledge__input {
+            width: 100px;
+            border: solid 1px $color-psi;
+            border-radius: 10rem;
+        }
+
+        .pledge__number {
+            width: 40%;
+            position: relative;
+            top: 5px;
+            left: 10px;
+            height: 40px;
+            border-radius: 10rem;
+            font-weight: $font-weight-bold;
+            
+        }
+
+        .pledge__currency {
+            position: relative;
+            top: 5px;
+            color: $color-gamma;
+
+        }
     }
 
 
@@ -448,16 +510,21 @@ body{
 }
 
 .all__wrapper {
-    background-color: $color-omega;
-    opacity: 0.6;
-    z-index: 9;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top:0;
-    left: 0;
-    visibility: visible;
     display: none;
+    &.active {
+        background-color: $color-omega;
+        background: linear-gradient(0deg, rgba(255,255,255,0.8575630935968137) 6%, rgba(0,0,0,0.891176538974965) 44%);
+        opacity: 0.6;
+        z-index: 9;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top:0;
+        left: 0;
+        visibility: visible;
+        display: block;
+    }
+    
 }
 
 .final {

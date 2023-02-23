@@ -14,24 +14,22 @@
   <!-- <img src="images/icon-check.svg"> -->
   <!-- <img src="images/icon-close-modal.svg"> -->
   <div class="all__wrapper"></div>
-  <section class="main__wrapper">
     <header class="header">
         <section class="header__menu">
             <img src="images/logo.svg" alt="Company logo" class="header__logo">
             <nav class="header__nav">
-                <input type="checkbox" id="toggle">
-                <label for ="toggle" class="header__label">a
-                    <img class="header__icon-mobile" src="images/icon-hamburger.svg" alt="mobile menu">
-                </label>
-                <ul class="nav">
-                    <li class="nav__item"><a href="#" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item"><a href="#" class="nav__link">Discover</a>
-                    </li>
-                    <li class="nav__item"><a href="#" class="nav__link">Get Started</a>
-                    </li>
-                </ul>
-                <div class="header__closure">X</div>
+              <button class="header__button">
+                <img class="header__icon-mobile--open active" src="images/icon-hamburger.svg" alt="mobile menu open">
+                <img class="header__icon-mobile--close" src="images/icon-close-menu.svg" alt="mobile menu close">
+              </button>
+              <ul class="nav">
+                  <li class="nav__item"><a href="#" class="nav__link">About</a>
+                  </li>
+                  <li class="nav__item"><a href="#" class="nav__link">Discover</a>
+                  </li>
+                  <li class="nav__item"><a href="#" class="nav__link">Get Started</a>
+                  </li>
+              </ul>
             </nav>  
         </section>
     </header>
@@ -102,7 +100,7 @@
         </div>
       </section>
     </main>
-    <dialog class="modal" id="modal">
+    <section class="modal" id="modal">
       <div class="modal__main">
         <h3 class="modal__name">Back this project</h3>
         <button class="modal__button">
@@ -119,6 +117,16 @@
         </label>
         <p class="modal__description"> Choose to support us without a reward if you simply believe in our project. As a backer, 
           you will be signed up to receive product updates via email.</p>
+        <div class="modal__pledge">
+          <p class="pledge__text">Enter your pledge</p>
+          <div class="pledge__wrapper">
+            <div class="pledge__input">
+              <span class="pledge__currency">$</span>
+              <input class="pledge__number">
+            </div>
+            <button class="pledge__button">Continue</button>
+          </div>
+        </div>
       </div>
       <div class="modal__scheme">
         <label for="b" class="modal__radio">
@@ -132,6 +140,16 @@
         <p class="modal__description">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
           youll be added to a special Backer member list.</p>
         <p class="modal__number"><span class="modal__number-detail">101</span><span class="modal__text-detail">left</span></p>
+        <div class="modal__pledge">
+          <p class="pledge__text">Enter your pledge</p>
+          <div class="pledge__wrapper">
+            <div class="pledge__input">
+              <span class="pledge__currency">$</span>
+              <input class="pledge__number">
+            </div>
+            <button class="pledge__button">Continue</button>
+          </div>
+        </div>
       </div>
       <div class="modal__scheme">
         <label for="c" class="modal__radio">
@@ -143,8 +161,19 @@
           </div>
         </label>
         <p class="modal__description">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
-          member list. Shipping is included.</p>
-        <p class="modal__number"><span class="modal__number-detail">64</span><span class="modal__text-detail">left</span></p>
+          member list. Shipping is included.
+            <p class="modal__number"><span class="modal__number-detail">64</span><span class="modal__text-detail">left</span></p>
+        </p>
+        <div class="modal__pledge">
+          <p class="pledge__text">Enter your pledge</p>
+          <div class="pledge__wrapper">
+            <div class="pledge__input">
+              <span class="pledge__currency">$</span>
+              <input class="pledge__number">
+            </div>
+            <button class="pledge__button">Continue</button>
+          </div>
+        </div>
       </div>
       <div class="modal__scheme-wrapper">
         <div class="modal__scheme">
@@ -155,7 +184,7 @@
           <p class="modal__number"><span class="modal__number-detail">0</span><span class="modal__text-detail">left</span></p>
         </div>
       </div>
-    </dialog>
+    </section>
     <dialog class="final">
       <img src="images/icon-check.svg" class="final__image" alt="icon check">
       <h3 class="final__title">Thanks for your support!</h3>
