@@ -311,22 +311,21 @@ body{
 
 .modal {
     text-align: left;
-    max-width: 95%;
-    margin: 0 auto;
+    max-width: 92%;
+    margin: 100px auto 0 auto;
     border: 1px solid $color-mu;
     padding: 20px;
     border-radius: 10px;
     background-color: $color-sigma;
+    position: absolute;
 
 
     
     &__main {
         padding: 20px;
+        color:$color-omega;
     }
 
-    &__button {
-        background: transparent;
-    }
 
     &__scheme {
         margin: 20px auto;
@@ -354,15 +353,13 @@ body{
         
     }
 
-    &__main {
-        color:$color-omega;
-    }
 
-    // &__button {
-        // position: absolute;
-        // left: 85%;
-        // top: 6%;
-    // }
+    &__button {
+        background: transparent;
+        position: absolute;
+        left: 85%;
+        top: 44px;
+    }
 
     &__subtitle {
         color:  $color-alpha;
@@ -531,10 +528,11 @@ body{
     background-color: $color-sigma;
     text-align: center;
     max-width: 90%;
-    margin: 0 auto;
+    margin: 130px auto 0 auto;
     border: 1px solid $color-mu;
-    padding: 31px;
+    padding: 40px 30px;
     border-radius: 10px;
+    position: absolute;
 
         &__image {
             width: 60px;
@@ -542,11 +540,12 @@ body{
         }
 
         &__title {
-            margin: 20px 0 20px 0;
+            margin: 22px 0 20px 0;
         }
 
         &__text {
             margin-bottom: 32px;
+            line-height: 1.4em;
 
         }
 
