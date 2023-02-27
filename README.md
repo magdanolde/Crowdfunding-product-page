@@ -7,7 +7,7 @@ This challenge was to build out a crowdfunding product page and get it looking a
 
 ### :unlock: FEATURES 
 
-Your users should be able to:
+Users should be able to:
 
 * View the optimal layout depending on their device's screen size
 * See hover states for interactive elements
@@ -18,11 +18,17 @@ Your users should be able to:
 
 ###  SOLUTIONS APPLIED IN THE PROJECT
 
-* <dialog/> element
+* Semantic HTML5 markup
+* CSS custom properties
+* SASS
+* Flexbox
+* Mobile-first workflow
+* BEM patterns
+* vanilla JS
 
 ###  SOLUTIONS I STILL WANT TO ADD 
 
-* Mobile & tablet version
+* I would like to some more transitions
 
 ### :boom: PROJECT LIVE 
 
