@@ -17,6 +17,23 @@ body{
 
     }
 
+    &__wrapper {
+        display: none;
+        &.active {
+            background-color: $color-omega;
+            background: linear-gradient(0deg, rgba(255,255,255,0.8575630935968137) 6%, rgba(0,0,0,0.891176538974965) 44%);
+            opacity: 0.6;
+            z-index: 9;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top:0;
+            left: 0;
+            visibility: visible;
+            display: block;
+        }
+    }
+
     &__button {
         cursor: pointer;
         width: 100%;
@@ -193,6 +210,13 @@ body{
             font-weight: $font-weight-bold;
             font-size: 1.6em;
             margin-bottom: 8px;
+            &--budget,
+            &--user {
+                font-weight: $font-weight-bold;
+                font-size: 1.6em;
+                margin-bottom: 8px;
+
+            }
         }
 
         .budget__text {
@@ -211,7 +235,7 @@ body{
 
             .budget__bar-inside {
                 background-color: $color-alpha;
-                width: 80%;
+                width: 78%;
                 height: 80%;
                 border-radius: 10px;
                 margin-left: 3px;
@@ -396,7 +420,7 @@ body{
         &::before {
             content: "";
         display: block;
-        width: 138%;
+        width: 140%;
         height: 1px;
         background: $color-psi;
         position: relative;
@@ -506,24 +530,7 @@ body{
    
 }
 
-.all__wrapper {
-    display: none;
-    &.active {
-        background-color: $color-omega;
-        background: linear-gradient(0deg, rgba(255,255,255,0.8575630935968137) 6%, rgba(0,0,0,0.891176538974965) 44%);
-        opacity: 0.6;
-        z-index: 9;
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        top:0;
-        left: 0;
-        visibility: visible;
-        display: block;
-    }
     
-}
-
 .final {
     background-color: $color-sigma;
     text-align: center;

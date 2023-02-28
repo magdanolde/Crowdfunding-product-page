@@ -18,7 +18,7 @@ Your users should be able to:
 
 ###  SOLUTIONS APPLIED IN THE PROJECT
 
-* <dialog/> element
+* 
 
 ###  SOLUTIONS I STILL WANT TO ADD 
 

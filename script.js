@@ -9,19 +9,26 @@ const schemes = document.querySelectorAll(".modal__scheme");
 const headerButton = document.querySelector(".header__button");
 const hamburgerOpen = document.querySelector(".header__icon-mobile--open");
 const hamburgerClose = document.querySelector(".header__icon-mobile--close");
-const nav = document.querySelector(".av");
-const menuWrapper = document.querySelector(".all__wrapper");
+const nav = document.querySelector(".nav");
+const menuWrapper = document.querySelector(".header__wrapper");
 const modalCloseBtn = document.querySelector(".modal__button");
 const endPage = document.querySelector(".final");
 const finalButton = document.querySelector(".final__button");
+let budgetNumber = document.querySelector(".budget__number--budget")
+let userNumber = document.querySelector(".budget__number--user")
+const progressBar = document.querySelector(".budget__bar-inside")
+let peopleNumber = parseFloat((userNumber.textContent).replace(/,/g, ''))
+let initBudget=89914;
+const people=[];
+const budget=[];
 buttonsArray.push(mainButton);
+let initWidth = 78;
 
 // closing and opening menu
 
 headerButton.addEventListener("click", () => {
   hamburgerOpen.classList.toggle("active");
   hamburgerClose.classList.toggle("active");
-  console.log(nav);
   if (hamburgerClose.classList.contains("active")) {
     nav.classList.add("active");
     menuWrapper.classList.add("active");
@@ -56,6 +63,12 @@ checkBoxes.forEach((item, i) => {
 
 modalCloseBtn.addEventListener("click", () => modal.close());
 
+// incresing the number of total pledge & numbers of pledgers
+
+function add(accumulator, a) {
+  return accumulator + a;
+}
+
 // submitting pledge & opening the "thank you" modal & closing the scheme modal
 
 pledgeButtons.forEach((button) => {
@@ -68,16 +81,23 @@ pledgeButtons.forEach((button) => {
     } else if (schemeInput.name === "premium" && schemeInput.value < 75) {
       alert("you have to pledge min. 75 $");
     } else {
+      // totalBudget = "$"+(totalBudget + parseFloat(schemeInput.value)).toLocaleString('en-IN');
+      
+      people.push(1);
+      const userSum = people.reduce(add, 0);
+      userNumber.textContent = (peopleNumber + userSum).toLocaleString('en-IN');
+      budget.push(parseFloat(schemeInput.value));
+     
+      const budgetSum = budget.reduce(add, 0);
+      budgetNumber.textContent = "$"+(initBudget + budgetSum).toLocaleString('en-IN');
+      progressBar.style.width = parseFloat(initWidth + userSum)+"%"
+      console.log(progressBar.style.width)
       schemeInput.value = " ";
       endPage.showModal();
     }
   });
+  
 });
-
 // closing the "thank you" modal
-
+//
 finalButton.addEventListener("click", () => endPage.close());
-
-
-
- 
