@@ -419,12 +419,12 @@ body{
         display: none;
         &::before {
             content: "";
-        display: block;
-        width: 140%;
-        height: 1px;
-        background: $color-psi;
-        position: relative;
-        left: -46px;
+            display: block;
+            width: 140%;
+            height: 1px;
+            background: $color-psi;
+            position: relative;
+            left: -46px;
         }
         &.active {
             display: block;
@@ -529,8 +529,7 @@ body{
     }
    
 }
-
-    
+  
 .final {
     background-color: $color-sigma;
     text-align: center;

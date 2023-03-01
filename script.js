@@ -69,31 +69,27 @@ function add(accumulator, a) {
   return accumulator + a;
 }
 
-// submitting pledge & opening the "thank you" modal & closing the scheme modal
+// submitting pledge & opening the "thank you" modal/closing the scheme modal/updating the numbers-counters
 
 pledgeButtons.forEach((button) => {
   const schemeInput = button.previousElementSibling.lastElementChild;
   button.addEventListener("click", () => {
     if (schemeInput.value === " " || schemeInput.value <= 0) {
-      alert("You have to enter a number greater than 0");
+        alert("You have to enter a number greater than 0");
     } else if (schemeInput.name === "medium" && schemeInput.value < 25) {
-      alert("you have to pledge min. 25 $");
+        alert("you have to pledge min. 25 $");
     } else if (schemeInput.name === "premium" && schemeInput.value < 75) {
-      alert("you have to pledge min. 75 $");
+        alert("you have to pledge min. 75 $");
     } else {
-      // totalBudget = "$"+(totalBudget + parseFloat(schemeInput.value)).toLocaleString('en-IN');
-      
-      people.push(1);
-      const userSum = people.reduce(add, 0);
-      userNumber.textContent = (peopleNumber + userSum).toLocaleString('en-IN');
-      budget.push(parseFloat(schemeInput.value));
-     
-      const budgetSum = budget.reduce(add, 0);
-      budgetNumber.textContent = "$"+(initBudget + budgetSum).toLocaleString('en-IN');
-      progressBar.style.width = parseFloat(initWidth + userSum)+"%"
-      console.log(progressBar.style.width)
-      schemeInput.value = " ";
-      endPage.showModal();
+        people.push(1);
+        const userSum = people.reduce(add, 0);
+        userNumber.textContent = (peopleNumber + userSum).toLocaleString('en-IN');
+        budget.push(parseFloat(schemeInput.value));
+        const budgetSum = budget.reduce(add, 0);
+        budgetNumber.textContent = "$"+(initBudget + budgetSum).toLocaleString('en-IN');
+        progressBar.style.width = parseFloat(initWidth + userSum) + "%";
+        schemeInput.value = " ";
+        endPage.showModal();
     }
   });
   

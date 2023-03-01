@@ -18,9 +18,6 @@ Users should be able to:
 
 ###  SOLUTIONS APPLIED IN THE PROJECT
 
-<<<<<<< HEAD
-* 
-=======
 * Semantic HTML5 markup
 * CSS custom properties
 * SASS
@@ -28,7 +25,6 @@ Users should be able to:
 * Mobile-first workflow
 * BEM patterns
 * vanilla JS
->>>>>>> 510fc4511bf5ed2c4353e1a1ac8c9c78f3faed80
 
 ###  SOLUTIONS I STILL WANT TO ADD 
 

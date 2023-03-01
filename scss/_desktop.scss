@@ -1,0 +1,170 @@
+@include mediaqueries(desktop) {
+
+    .header {
+        background-image: url(../images/image-hero-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50vh;
+        &__button {
+            display: none;
+        }
+
+        .nav {
+            display: flex;
+            list-style: none;
+            width: 400px;
+            margin-top: 40px;
+            
+            &__item {
+                border:none;
+                padding-bottom: 2px;
+
+            }
+
+            &__link {
+                color: $color-sigma;
+                &:hover{
+                    color: $color-alpha;
+                    text-decoration: underline;
+                }
+            }
+
+        }
+    }
+
+    .main {
+        .main__description {
+            text-align: center;
+            max-width: 61%;
+            border: 1px solid $color-mu;
+            padding: 30px 70px 20px 70px;
+            border-radius: 10px;
+            background-color: $color-sigma;
+            position: relative;
+            bottom: 83px;
+            right: 30px;
+            height: 30vh;
+
+            .description__title {
+                font-size: 1.9em;
+            }
+            
+            .description__text {
+                font-size: 1.1em;
+                margin: -25px 0 30px 0;
+            }
+
+            .description__button {
+                font-size: 1.1em;
+            }
+
+            .description__logo {
+                height: 75px;
+                width: 75px;
+                bottom: 70px;
+            }
+        }
+
+        .main__budget {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            max-width: 61%;
+            margin: -55px 0px 20px 0px;
+            border: 1px solid $color-mu;
+            padding: 25px 20px;
+            position: relative;
+            left: 250px;
+            .budget__wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin: 10px 0px 10px 50px;
+            }
+            .budget__total,
+            .budget__donors,
+            .budget__days {
+                margin-top: 0px;
+                width: 50%;
+                
+                .budget__text{
+                    font-size: 1.1em;
+                    text-align: left;
+                }
+
+                .budget__number {
+                    text-align: left;
+                    &--budget,
+                    &--user{
+                        text-align: left;
+                    }
+                    &--budget + .budget__text{
+                        width: 165px;
+
+                    }
+                }
+            }
+
+            .budget__donors,
+            .budget__days{
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 1px;
+                    height: 70%;
+                    background: $color-psi;
+                    position: relative;
+                    top: -50px;
+                    left: -50px;
+                }
+            }
+
+            .budget__progess-bar {
+                width: 90%;
+                margin-left: 46px;
+                
+            }
+
+        }
+
+        .main__details {
+            max-width: 61%;
+            position: relative;
+            left: 250px;
+            margin: 0;
+
+            .details__scheme {
+                max-width: 92%;
+            }
+
+            .details__title {
+                padding-left: 35px;
+            }
+
+            .details__text {
+                font-size: 1.1rem;
+                color: $color-gamma;
+                line-height: 1.5;
+                padding: 0 35px;
+            }
+
+            .scheme__wrapper {
+                display: flex;
+                justify-content: space-between;
+
+                .scheme__title {
+                    font-size: 1.3em;
+                }
+                .scheme__subtitle {
+                    margin-top: 0px;
+                }           
+               
+            }
+            .scheme__description {
+                color: $color-gamma;
+                font-size: 1.1em;
+            }
+        }
+
+    }
+
+}
