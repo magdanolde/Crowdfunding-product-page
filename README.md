@@ -22,9 +22,17 @@ Users should be able to:
 * CSS custom properties
 * SASS
 * Flexbox
+* Grid
 * Mobile-first workflow
 * BEM patterns
-* vanilla JS
+* Vanilla JS
+
+It was a great project to practise SASS, that I have learnt lately. 
+
+Apart from that I learnt about the <dialog> tag and applied it the modals/popups within this project. 
+Further, I used the showmodal() method to open my modals. It allowed my to style a ::backdrop pseudo-element.
+With the close() method I made it possible to close the modals.
+
 
 ###  SOLUTIONS I STILL WANT TO ADD 
 
