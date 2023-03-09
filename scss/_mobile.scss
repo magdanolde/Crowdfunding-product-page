@@ -190,6 +190,10 @@ body{
             width: 60px;
         }
 
+        .description__name {
+            display: none;
+        }
+
     }
     .main__budget {
         text-align: center;
@@ -269,6 +273,9 @@ body{
         border: 1px solid $color-psi;
         padding: 25px;
         border-radius: 10px;
+        &:nth-child(n+2) > .scheme__wrapper > button:hover {
+            background-color: $color-beta;
+         }
 
 
         .scheme__button {
@@ -282,10 +289,7 @@ body{
             font-weight: $font-weight-bold;
             line-height: 1.4px;
             margin-top: 10px;
-                &:hover {
-                    background-color: $color-beta;
-                }
-
+            font-size: 0.9em;
         }
 
         .scheme__subtitle {
@@ -342,6 +346,10 @@ body{
     border-radius: 10px;
     background-color: $color-sigma;
     position: absolute;
+    &::backdrop {
+        background-color: $color-omega;
+        opacity: 0.6;
+    }
 
 
     
@@ -484,12 +492,6 @@ body{
     }
 
 
-    // &__wrapper-title {
-        // position: relative;
-        // left: 25px;
-
-    // }
-
     &__radio {
         display: inline-flex;
         align-items: center;
@@ -539,6 +541,10 @@ body{
     padding: 40px 30px;
     border-radius: 10px;
     position: absolute;
+    &::backdrop {
+        background-color: $color-omega;
+        opacity: 0.6;
+    }
 
         &__image {
             width: 60px;

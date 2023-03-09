@@ -37,7 +37,10 @@
       <p class="description__text">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
       <div class="description__wrapper">
         <button class="description__button">Back this project</button>
-        <img src="images/icon-bookmark.svg" class="description__bookmark" alt="bookmark">
+        <div class="description__toggle"> 
+          <svg id="bookmark" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle id="idCircle" fill="#2F2F2F" cx="28" cy="28" r="28"/><path id="idPath" fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>
+           <p class="description__name">Bookmark</p>
+        </div>
       </div>
     </section>
     <section class="main__budget">
@@ -77,28 +80,32 @@
         </div>
         <p class="scheme__description">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
           youll be added to a special Backer member list.</p>
-        <p class="scheme__number">
-          <span class="scheme__number-detail">101
-          </span>
-          <span class="scheme__text">left
-          </span>
-        </p>
-        <button class="scheme__button">Select Reward</button>
+        <div class="scheme__wrapper">
+          <p class="scheme__number">
+            <span class="scheme__number-detail">101
+            </span>
+            <span class="scheme__text">left
+            </span>
+          </p>
+          <button class="scheme__button">Select Reward</button>
+        </div>
       </div>
       <div class="details__scheme">
         <div class="scheme__wrapper">
-        <h4 class="scheme__title">Black Edition Stand</h4>
-        <h4 class="scheme__subtitle">Pledge $75 or more</h4>
+          <h4 class="scheme__title">Black Edition Stand</h4>
+          <h4 class="scheme__subtitle">Pledge $75 or more</h4>
         </div>
         <p class="scheme__description">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
             member list. Shipping is included.</p>
-        <p class="scheme__number">
-          <span class="scheme__number-detail">64
-          </span>
-          <span class="scheme__text">left
-          </span>
-        </p>
-        <button class="scheme__button">Select Reward</button>
+        <div class="scheme__wrapper">   
+          <p class="scheme__number">
+            <span class="scheme__number-detail">64
+            </span>
+            <span class="scheme__text">left
+            </span>
+          </p>
+          <button class="scheme__button">Select Reward</button>
+        </div>
       </div>
       <div class="details__scheme-wrapper">
         <div class="details__scheme">
@@ -108,6 +115,7 @@
         </div>
           <p class="scheme__description">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
             to our Backer member list. Shipping is included.</p>
+        <div class="scheme__wrapper">  
           <p class="scheme__number">
             <span class="scheme__number-detail">0
             </span>
@@ -119,7 +127,7 @@
       </div>
     </section>
   </main>
-  <div class="modal" id="modal">
+  <dialog class="modal" id="modal">
     <div class="modal__main">
       <h3 class="modal__name">Back this project</h3>
       <button class="modal__button">
@@ -205,8 +213,14 @@
     </div>
     <div class="modal__scheme-wrapper">
       <div class="modal__scheme">
-        <h4 class="modal__title"> Mahogany Special Edition</h4>
-        <h4 class="modal__subtitle">Pledge $200 or more</h4>
+        <label for="d" class="modal__radio">
+          <input type="radio" class="radio__input" id="c" name="scheme">
+          <div class="radio__radio"></div>
+          <div class="modal__wrapper-title">
+            <h4 class="modal__title"> Mahogany Special Edition</h4>
+            <h4 class="modal__subtitle">Pledge $200 or more</h4>
+          </div>
+        </label>
         <p class="modal__description">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
           to our Backer member list. Shipping is included.
         </p>
@@ -218,7 +232,7 @@
         </p>
       </div>
     </div>
-  </div>
+  </dialog>
   <dialog class="final">
     <img src="images/icon-check.svg" class="final__image" alt="icon check">
     <h3 class="final__title">Thanks for your support!</h3>

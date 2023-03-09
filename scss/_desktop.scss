@@ -9,20 +9,29 @@
             display: none;
         }
 
+        &__logo {
+            width: 140px;
+            height: 20px;
+            margin-top: 26px;
+            margin-left: -15px;
+    
+        }
+
         .nav {
             display: flex;
             list-style: none;
             width: 400px;
             margin-top: 40px;
+            margin-right: -55px;
             
             &__item {
                 border:none;
                 padding-bottom: 2px;
-
             }
 
             &__link {
                 color: $color-sigma;
+                font-size: 1.1em;
                 &:hover{
                     color: $color-alpha;
                     text-decoration: underline;
@@ -37,13 +46,12 @@
             text-align: center;
             max-width: 61%;
             border: 1px solid $color-mu;
-            padding: 30px 70px 20px 70px;
+            padding: 40px 70px 30px 70px;
             border-radius: 10px;
             background-color: $color-sigma;
             position: relative;
             bottom: 83px;
             right: 30px;
-            height: 30vh;
 
             .description__title {
                 font-size: 1.9em;
@@ -58,11 +66,29 @@
                 font-size: 1.1em;
             }
 
+            .description__toggle {
+                width: 200px;
+                background-color: $color-lambda;
+                border-radius: 10rem;
+                display: flex;
+                .description__bookmark {
+                    color: $color-alpha;
+                }
+
+                .description__name {
+                    display: block;
+                    margin: 20px 0px 0px 25px;
+                    font-weight: $font-weight-medium;
+                }
+            }
+
             .description__logo {
                 height: 75px;
                 width: 75px;
                 bottom: 70px;
+
             }
+
         }
 
         .main__budget {
@@ -70,11 +96,10 @@
             flex-direction: column;
             text-align: center;
             max-width: 61%;
-            margin: -55px 0px 20px 0px;
             border: 1px solid $color-mu;
             padding: 25px 20px;
             position: relative;
-            left: 250px;
+            left: -26px;
             .budget__wrapper {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
@@ -129,11 +154,17 @@
         .main__details {
             max-width: 61%;
             position: relative;
-            left: 250px;
-            margin: 0;
+            left: -25px;
 
             .details__scheme {
-                max-width: 92%;
+                max-width: 93%;
+                .scheme__number-detail {
+                    font-size: 1.9rem;
+                }
+                .scheme__text {
+                    font-size: 1.0em;
+                    margin: 10px 0px 0px 0px;
+                }
             }
 
             .details__title {
@@ -146,6 +177,7 @@
                 line-height: 1.5;
                 padding: 0 35px;
             }
+
 
             .scheme__wrapper {
                 display: flex;
@@ -165,6 +197,196 @@
             }
         }
 
+    }
+
+    .modal {
+        max-width: 61%;
+        top: 109px;
+        left: -55px;
+        padding: 50px 20px;
+        
+        &__button {
+            left: 93%;
+            cursor: pointer;
+        }
+        &__name {
+            font-size: 1.5em;
+            font-weight: $font-weight-bold;
+        }
+
+        &__radio {
+            grid-area: input;
+        }
+
+        &__text {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        &__main {
+            padding: 10px;
+        }
+
+        &__description {
+            font-size: 1.1em;
+            grid-area: text;
+            padding-left: 32px;
+            
+        }
+
+        &__wrapper-title {
+            display: flex;
+            justify-content: space-between;
+            // width: 280px;
+            margin-bottom: 10px;
+
+        }
+
+        &__title {
+            line-height: 1.5rem;
+            cursor: pointer;
+            // &:hover {
+                // color: $color-alpha;
+
+            // }
+        }
+
+        &__subtitle {
+            margin: 0 0 0 15px;
+        }
+
+        &__scheme {
+            &:nth-child(n+2) > label:hover {
+               color: $color-alpha;
+            }
+            &:nth-child(n+2) > label:hover > div:first-of-type {
+                border: 1px solid $color-alpha;
+             }
+            display: grid;
+            grid-template-columns: 6fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 
+            'input number'
+            'text text'
+            'pledge pledge';
+        }
+
+        &__number {
+            margin: 0px;
+            display: flex;
+            grid-area: number;
+            margin-top: 10px;
+            .modal__number-detail {
+                font-weight: $font-weight-bold;
+                display: block;    
+                margin-right: 10px;
+                font-size: 1.1em;
+                line-height: 24px;
+            }
+            .modal__text-detail {
+                margin-top: 5px;
+                font-size: 0.9em;
+            
+            }
+        }
+
+        &__pledge {
+            &::before {
+                content: "";
+                display: block;
+                width: 163%;
+                height: 1px;
+                background: $color-psi;
+                position: relative;
+                left: -22px;
+                top: -75px;
+            }
+            &.active {
+                grid-area: pledge;
+                display: grid;
+                grid-template-columns: 4fr 2fr;
+    	        grid-template-rows: 1fr;
+                grid-template-areas: 
+                'name enter';
+                text-align: left;
+                padding: 25px 20px 0 0;
+            }
+
+            .pledge__text {
+                font-size: 1.1em;
+                grid-area: name;
+            }
+
+            .pledge__wrapper {
+                font-size: 1.1em;
+                grid-area: enter;
+                margin-top: 10px;
+                &:hover > div  {
+                    border: 1px solid $color-alpha;
+                } 
+
+                .pledge__button:hover {
+                    background-color: $color-beta;
+
+                }
+
+                .pledge__input {
+                    height: 50px;
+                    .pledge__currency {
+                        padding-left: 20px;
+                    }
+                    .pledge__number {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+
+
+
+            
+        }
+
+    }
+
+    .final {
+        background-color: $color-sigma;
+        text-align: center;
+        max-width: 43%;
+        border: 1px solid $color-mu;
+        padding: 40px 30px;
+        border-radius: 10px;
+        position: absolute;
+        top: 48%;
+        left: -60px;
+    
+            &__image {
+                width: 70px;
+                height: 70px;
+            }
+    
+            &__title {
+                font-weight: $font-weight-bold;
+                font-size: 1.5em;
+            }
+    
+            &__text {
+                margin: 0px auto 32px auto;
+                line-height: 1.6em;
+                font-size: 1.1em;
+                width: 90%;
+                text-align: center;
+            }
+    
+            &__button {
+                width: 130px;
+                height: 60px;
+                padding: 4px;
+                line-height: 1.6px;
+                font-size: 1.1em;
+                font-weight: $font-weight-bold;
+            }
+    
+        
     }
 
 }
