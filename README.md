@@ -45,7 +45,7 @@ I also learnt, how to use media queries in JS.
 
 ### :boom: PROJECT LIVE 
 
-![Neo1](https://user-images.githubusercontent.com/83141358/198831853-2b26fc29-593b-4a69-bd7e-4644d70f8059.PNG)
+![Bamboo](https://user-images.githubusercontent.com/83141358/224510905-af743441-4c4a-4cf3-9e5c-7f7903c0f11f.png)
 
 
 ### 💻 TECHNOLOGIES
