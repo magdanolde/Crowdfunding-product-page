@@ -32,7 +32,7 @@ It was a great project to practise SASS, that I have learnt lately.
 Apart from that I learnt about the <dialog> tag and applied it the modals/popups within this project. 
 Further, I used the showmodal() method to open my modals. It allowed my to style a ::backdrop pseudo-element.
 With the close() method I made it possible to close the modals.
-This video from [Kevin Powell(https://www.youtube.com/watch?v=TAB_v6yBXIE&t=303s) was my source of knowledge.
+This video from [Kevin Powell](https://www.youtube.com/watch?v=TAB_v6yBXIE&t=303s) was my source of knowledge.
 
 Moreover, I refreshed my knowledge on grid and grid-template-areas.
 
