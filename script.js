@@ -25,9 +25,8 @@ buttonsArray.push(mainButton);
 let initWidth = 78;
 const bookmark = document.querySelector(".description__name");
 const bookmarkIcon = document.getElementById("bookmark");
-console.log(bookmarkIcon);
 
-// closing and opening menu
+// closing and opening menu mobile
 
 headerButton.addEventListener("click", () => {
   hamburgerOpen.classList.toggle("active");
@@ -40,6 +39,14 @@ headerButton.addEventListener("click", () => {
     menuWrapper.classList.remove("active");
   }
 });
+
+function closeNavDesktop() {
+  if (window.innerWidth >= 1100) {
+    nav.classList.remove("active");
+  }
+}
+
+window.addEventListener("resize", closeNavDesktop);
 
 // opening and closing each pledge info with pledge information/ adding border to a scheme if active
 

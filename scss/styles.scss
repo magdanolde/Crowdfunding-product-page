@@ -1,5 +1,5 @@
-@import 'reset';
-@import 'variables';
-@import 'mixin';
-@import 'mobile';
-@import 'desktop';
+@import '../scss/abstracts/reset';
+@import '../scss/abstracts/variables';
+@import '../scss/abstracts/mixin';
+@import '../scss/devices/mobile';
+@import '../scss/devices/desktop';

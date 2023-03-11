@@ -90,8 +90,8 @@ body{
             display: flex;
             flex-direction: column;
             position: absolute;
-            top: 10%;
-            left: 5%;
+            top: 25%;
+            left: 50%;
             height: 200px;
             width: 350px;
             background-color: $color-sigma;
@@ -99,6 +99,7 @@ body{
             border-radius: 7px;
             align-items: left;
             z-index: 101;
+            transform: translate(-50%, -50%);
         }
 
     &__item {
@@ -229,7 +230,7 @@ body{
 
 
         .budget__progess-bar {
-            width: 300px;
+            width: 95%;
             height: 20px;
             background-color: $color-mu;
             display: flex;
