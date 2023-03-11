@@ -42,6 +42,7 @@ I also learnt, how to use media queries in JS.
 ###  SOLUTIONS I STILL WANT TO ADD 
 
 * I would like to some more transitions for modals
+* During working on this project I found out that @import in SASS is an outdated practice already and I should use @use and @forward so in my next project I am definitely going to use them!
 
 ### :boom: PROJECT LIVE 
 
