@@ -277,6 +277,7 @@
             display: flex;
             grid-area: number;
             margin-top: 10px;
+            margin-left: 60px;
             .modal__number-detail {
                 font-weight: $font-weight-bold;
                 display: block;    
@@ -292,16 +293,6 @@
         }
 
         &__pledge {
-            &::before {
-                content: "";
-                display: block;
-                width: 163%;
-                height: 1px;
-                background: $color-psi;
-                position: relative;
-                left: -22px;
-                top: -75px;
-            }
             &.active {
                 grid-area: pledge;
                 display: grid;
@@ -311,7 +302,11 @@
                 'name enter';
                 text-align: left;
                 padding: 25px 20px 0 0;
+                &::before {
+                    display: none;
+                }
             }
+
 
             .pledge__text {
                 font-size: 1.1em;
@@ -322,6 +317,8 @@
                 font-size: 1.1em;
                 grid-area: enter;
                 margin-top: 10px;
+                margin-left: 120px;
+                width: 70%;
                 &:hover > div  {
                     border: 1px solid $color-alpha;
                 } 
@@ -332,6 +329,7 @@
                 }
 
                 .pledge__input {
+                    margin-right: 10px;
                     height: 50px;
                     .pledge__currency {
                         padding-left: 20px;
