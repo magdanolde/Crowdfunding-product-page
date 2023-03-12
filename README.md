@@ -36,7 +36,8 @@ This video from [Kevin Powell](https://www.youtube.com/watch?v=TAB_v6yBXIE&t=303
 
 Moreover, I refreshed my knowledge on grid and grid-template-areas.
 
-I also learnt, how to use media queries in JS.
+I also learnt, how to use media queries in JS and how to convert strings with "," to numbers and vice versa.
+(toLocaleString("en-IN") & .replace(/,/g, ''))
 
 
 ###  SOLUTIONS I STILL WANT TO ADD 
@@ -57,3 +58,4 @@ I also learnt, how to use media queries in JS.
 
 ### 🤝 SPECIALTHANKS
 
+Thanks to [Frontend Mentor](https://www.frontendmentor.io) - for providing me with this task.
