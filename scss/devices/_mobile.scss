@@ -293,10 +293,15 @@ body{
             font-size: 0.9em;
         }
 
+        .scheme__title{
+            font-size: 1.2rem;
+        }
+
         .scheme__subtitle {
             color:  $color-alpha;
             margin: 5px 0 20px 0;
             line-height: 1.5rem;
+            font-size: 1rem;
         }
 
         .scheme__description {
