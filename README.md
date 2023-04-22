@@ -49,6 +49,8 @@ I also learnt, how to use media queries in JS and how to convert strings with ",
 
 ![Bamboo](https://user-images.githubusercontent.com/83141358/224510905-af743441-4c4a-4cf3-9e5c-7f7903c0f11f.png)
 
+https://magdanolde.github.io/Crowdfunding-product-page/
+
 
 ### 💻 TECHNOLOGIES
 
