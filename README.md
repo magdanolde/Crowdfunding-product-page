@@ -29,7 +29,7 @@ Users should be able to:
 
 It was a fantastic project for honing my recently acquired SASS skills.
 
-Due to mastering of the <dialog> tag, I successfully implemented modals/popups in the project. Utilizing the showModal() method allowed me to open the modals seamlessly. I also had the opportunity to style a ::backdrop pseudo-element for added visual appeal. The close() method played a crucial role in enabling modal closure. [Kevin Powell](https://www.youtube.com/watch?v=TAB_v6yBXIE&t=303s)tutorial video served as my primary source of guidance throughout this process.
+Due to mastering of the <dialog> tag, I successfully implemented modals/popups in the project. Utilizing the showModal() method allowed me to open the modals seamlessly. I also had the opportunity to style a ::backdrop pseudo-element for added visual appeal. The close() method played a crucial role in enabling modal closure. [Kevin Powell](https://www.youtube.com/watch?v=TAB_v6yBXIE&t=303s) tutorial video served as my primary source of guidance throughout this process.
 
 Furthermore, I took the chance to revisit and solidify my understanding of grid layouts and grid-template-areas.
 
