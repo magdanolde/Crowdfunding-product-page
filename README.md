@@ -27,23 +27,19 @@ Users should be able to:
 * BEM patterns
 * Vanilla JS
 
-It was a great project to practise SASS, that I have learnt lately. 
+It was a fantastic project for honing my recently acquired SASS skills.
 
-Apart from that I learnt about the <dialog> tag and applied it the modals/popups within this project. 
-Further, I used the showmodal() method to open my modals. It allowed my to style a ::backdrop pseudo-element.
-With the close() method I made it possible to close the modals.
-This video from [Kevin Powell](https://www.youtube.com/watch?v=TAB_v6yBXIE&t=303s) was my source of knowledge.
+Due to mastering of the <dialog> tag, I successfully implemented modals/popups in the project. Utilizing the showModal() method allowed me to open the modals seamlessly. I also had the opportunity to style a ::backdrop pseudo-element for added visual appeal. The close() method played a crucial role in enabling modal closure. Kevin Powell's tutorial video served as my primary source of guidance throughout this process.
 
-Moreover, I refreshed my knowledge on grid and grid-template-areas.
+Furthermore, I took the chance to revisit and solidify my understanding of grid layouts and grid-template-areas.
 
-I also learnt, how to use media queries in JS and how to convert strings with "," to numbers and vice versa.
-(toLocaleString("en-IN") & .replace(/,/g, ''))
+Expanding beyond styling, I delved into utilizing media queries in JavaScript and learned a useful skill—converting strings with commas to numbers and vice versa using toLocaleString("en-IN") and .replace(/,/g, '').
 
+[Kevin Powell](https://www.youtube.com/watch?v=TAB_v6yBXIE&t=303s)
 
 ###  SOLUTIONS I STILL WANT TO ADD 
 
-* I would like to some more transitions for modals
-* During working on this project I found out that @import in SASS is an outdated practice already and I should use @use and @forward so in my next project I am definitely going to use them!
+As for future enhancements, I plan to incorporate additional transitions for the modals, enhancing the overall user experience. Additionally, I discovered that the @import directive in SASS is considered outdated. In my upcoming projects, I am committed to adopting the more modern and efficient practices of @use and @forward.
 
 ### :boom: PROJECT LIVE 
 
